@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <img src="pic/logo2.png" class="logo">
+
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#portafolio">MY WORKS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="info" id="home">
+            <h3>Hola soy <span>Alen</span>.</h3>
+            <h1>FRONT END DEVELOPER</h1>
+        </div>
+        <br><br><br>
+
+
+        <p id="skills" style="text-align: center;">
+        <h3 style="text-align: center;">Mis Skills</h3> <br><br><br>
+        <ul>
+            <li>Ionic 3, 4, 5, 6</li>
+            <li>Cordova, capacitor</li>
+            <li>React Native</li>
+            <li>Azure Devops</li>
+            <li>Firebase</li>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>SQL Server</li>
+            <li>Git</li>
+            <li>SVN</li>
+            <li>App store</li>
+            <li>Play store</li>
+            <li>Xcode </li>
+            <li>Android studio</li>
+            <li>MySql</li>
+            <li>Angular 8, 9, 10, 11, 12, 13 </li>
+            <li>Angular 8, 9, 10, 11, 12, 13 </li>
+        </ul>
+        </p>
+        <br><br>
+
+        <div id="portafolio">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade" style="text-align: center;">
+                    <div class="text" style="position: relative;">
+                        <h1>RAYO NEGRO </h1> <br>
+                        La aplicación de Rayo negro tiene como objetivo centralizar y contabilizar los establecientos
+                        que cuenta con la opción de pago de visa, esta aplicación está disponible para estados como:
+                        Estado de México, CDMX, Guadalajara y Monterrey.
+                        Esta aplicación se desarrolló de manera hibrida con IONIC y cuenta con plugins como lo son
+                        geolocalización, sqlite, preferences, permisos, cámara, push notifications y crashlytics.
+                    </div>
+
+                    <img src="pic/app1.png" style="width:10%">
+                    <img src="pic/app11.png" style="width:10%">
+                    <img src="pic/app111.png" style="width:10%">
+                    <img src="pic/app1111.png" style="width:10%">
+
+                </div>
+
+
+                <div class="mySlides fade" style="text-align: center;">
+                    <div class="text" style="position: relative;">
+                        <h1>AXEN ACADEMY </h1> <br>
+                        Es una aplicación de paga la cual está diseñada para aprender a realizar trading
+                    </div>
+
+                    <img src="pic/app2.png" style="width:10%">
+                    <img src="pic/app22.png" style="width:10%">
+                    <img src="pic/app222.png" style="width:10%">
+                    <img src="pic/app2222.png" style="width:10%">
+
+                </div>
+
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 5000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>
